@@ -32,8 +32,8 @@ public class UserDAOImpl implements UserDAO {
 	public void save(UserCustomer user) {
 		// sessionFactory.getCurrentSession().saveOrUpdate(user);
 		Session session = sessionFactory.getCurrentSession();
-		// user.setUserrole("ROLE_ADMIN");
-		user.setUserrole("ROLE_USER");
+		 user.setUserrole("ROLE_ADMIN");
+		//user.setUserrole("ROLE_USER");
 		user.setResettoken(UUID.randomUUID().toString());
 		Cart cart = new Cart();
 		user.setCart(cart);
